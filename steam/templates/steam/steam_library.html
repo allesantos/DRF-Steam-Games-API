@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos na Steam</title>
+    <link rel="stylesheet" href="{% static 'css/steam_styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogos na Steam</h1>
+        <form method="GET" action="">
+            <label for="steam_id">Digite seu Steam ID:</label>
+            <input type="text" id="steam_id" name="steam_id" required>
+            <button type="submit">Consultar</button>
+        </form>
+
+        {% if games %}
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Jogo</th>
+                        <th>Tempo Jogado (minutos)</th>
+                        <th>Ícone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for game in games %}
+                        <tr>
+                            <td>{{ game.name }}</td>
+                            <td>{{ game.tempo_jogado }}</td>
+                            <td>
+                                {% if game.img_icon_url %}
+                                    <img src="http://media.steampowered.com/steamcommunity/public/images/apps/{{ game.appid }}/{{ game.img_icon_url }}.jpg" alt="Ícone">
+                                {% else %}
+                                    Sem ícone
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <!-- Botão para Exportar Jogos -->
+            <form method="GET" action="{% url 'export_games' %}">
+                <input type="hidden" name="steam_id" value="{{ request.GET.steam_id }}">
+                <button type="submit" style="margin-top: 20px; background-color: green;">Exportar para Excel</button>
+            </form>
+        {% endif %}
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
