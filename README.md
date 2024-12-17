@@ -35,4 +35,15 @@ Antes de começar, você precisará ter as seguintes ferramentas instaladas:
 - Python 3.x
 - Git
 - Uma chave de API da Steam (pode ser obtida [aqui](https://steamcommunity.com/dev/apikey)).
+  
 Além disso, é recomendável o uso de um ambiente virtual Python para gerenciar dependências.
+
+## Instalação
+1. Clone o repositório para sua máquina local:
+   
+   ```bash
+   
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositorio
+  ```
+   
