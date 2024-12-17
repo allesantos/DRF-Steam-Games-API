@@ -32,7 +32,7 @@ __Formatos de saída:__
 ## Pré-requisitos
 Antes de começar, você precisará ter as seguintes ferramentas instaladas:
 
-Python 3.x
-Git
-Uma chave de API da Steam (pode ser obtida aqui).
+- Python 3.x
+- Git
+- Uma chave de API da Steam (pode ser obtida [aqui](https://steamcommunity.com/dev/apikey).
 Além disso, é recomendável o uso de um ambiente virtual Python para gerenciar dependências.
