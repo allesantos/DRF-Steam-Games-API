@@ -19,13 +19,13 @@ Este projeto foi desenvolvido para permitir que usuários da Steam consultem e b
 - Interface RESTful para integração com outras aplicações.
 
 ## Recursos
-Frameworks usados:
-Django 4.x
-Django Rest Framework (DRF)
-APIs utilizadas:
-API Pública da Steam
-Formatos de saída:
-JSON
+### Frameworks usados:
+- Django 4.x
+- Django Rest Framework (DRF)
+### APIs utilizadas:
+- API Pública da Steam
+### Formatos de saída:
+- JSON
 
 ## Pré-requisitos
 Antes de começar, você precisará ter as seguintes ferramentas instaladas:
