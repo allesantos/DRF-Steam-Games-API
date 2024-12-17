@@ -2,7 +2,7 @@
 Uma API criada com Django e Django Rest Framework para consultar e baixar a lista de todos os jogos de um usuário na Steam.
 
 ## Índice
-- Descrição(https://github.com/allesantos/Django-RestFramework-Jogos-Steam-/blob/main/README.md#descri%C3%A7%C3%A3o)
+- Descrição(#Descrição)
 - Recursos
 - Pré-requisitos
 - Instalação
