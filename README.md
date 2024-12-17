@@ -3,12 +3,12 @@ Uma API criada com Django e Django Rest Framework para consultar e baixar a list
 
 ## Índice
 - [Descrição](#Descrição)
-- Recursos
-- Pré-requisitos
-- Instalação
-- Uso
-- Contribuição
-- Licença
+- [Recursos](#Recursos)
+- [Pré-requisitos](#Pré-requisitos)
+- [Instalação](#Instalação)
+- [Uso](#Uso)
+- [Contribuição](#Contribuição)
+- [Licença](#Licença)
 
 ## Descrição
 Este projeto foi desenvolvido para permitir que usuários da Steam consultem e baixem a lista completa de jogos vinculados às suas contas. Ele utiliza a API pública da Steam para obter informações sobre os jogos e foi construído usando Django e Django Rest Framework (DRF) para fornecer uma interface RESTful.
