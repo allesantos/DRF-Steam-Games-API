@@ -22,8 +22,10 @@ Este projeto foi desenvolvido para permitir que usuários da Steam consultem e b
 __Frameworks usados:__
 - Django 4.x
 - Django Rest Framework (DRF)
+  
 __APIs utilizadas:__
 - API Pública da Steam
+  
 __Formatos de saída:__
 - JSON
 
