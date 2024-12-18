@@ -119,6 +119,9 @@ Sinta-se à vontade para contribuir com o projeto! Basta seguir estas etapas:
    
 2. Crie uma nova branch para sua feature/bugfix:
 
-  ```linguagem
-Seu código aqui
+  ```
+git checkout -b minha-feature
+
 ```
+
+3. Envie suas alterações:
