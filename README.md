@@ -97,16 +97,16 @@ Baixa a lista de jogos em formato JSON.
 __Endpoint:__ /api/games/{steam_id}/
 
     
-      [
-        {
-          "name": "Counter-Strike: Global Offensive",
-          "tempo_jogado": 1200,
-        },
-        {
-          "name": "Dota 2",
-          "tempo_jogado": 4500,
-        }
-      ]
+          [
+            {
+              "name": "Counter-Strike: Global Offensive",
+              "tempo_jogado": 1200,
+            },
+            {
+              "name": "Dota 2",
+              "tempo_jogado": 4500,
+            }
+          ]
     
   
 ## Contribuição
