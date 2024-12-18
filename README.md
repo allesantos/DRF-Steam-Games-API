@@ -96,20 +96,20 @@ Baixa a lista de jogos em formato JSON.
 ### 2. Exemplo de resposta
 __Endpoint:__ /api/games/{steam_id}/
 
-  ```
-  [
-  {
-    "name": "Counter-Strike: Global Offensive",
-    "playtime_forever": 1200,
-    "last_played": "2024-12-01"
-  },
-  {
-    "name": "Dota 2",
-    "playtime_forever": 4500,
-    "last_played": "2024-11-25"
-  }
-]
-  ```
+      ```
+      [
+        {
+          "name": "Counter-Strike: Global Offensive",
+          "playtime_forever": 1200,
+          "last_played": "2024-12-01"
+        },
+        {
+          "name": "Dota 2",
+          "playtime_forever": 4500,
+          "last_played": "2024-11-25"
+        }
+    ]
+    ```
 
 ## Contribuição
 
@@ -119,9 +119,9 @@ Sinta-se à vontade para contribuir com o projeto! Basta seguir estas etapas:
    
 2. Crie uma nova branch para sua feature/bugfix:
 
-  ```
-git checkout -b minha-feature
-```
+      ```
+      git checkout -b minha-feature
+      ```
 
 3. Envie suas alterações:
 
