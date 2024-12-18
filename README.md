@@ -100,13 +100,11 @@ __Endpoint:__ /api/games/{steam_id}/
     [
         {
           "name": "Counter-Strike: Global Offensive",
-          "playtime_forever": 1200,
-          "last_played": "2024-12-01"
+          "tempo_jogado": 1200,
         },
         {
           "name": "Dota 2",
-          "playtime_forever": 4500,
-          "last_played": "2024-11-25"
+          "tempo_jogado": 4500,
         }
     ]
     
