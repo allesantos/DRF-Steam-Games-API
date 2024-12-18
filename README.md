@@ -118,3 +118,6 @@ Sinta-se à vontade para contribuir com o projeto! Basta seguir estas etapas:
 1. Faça um fork do repositório.
 2. Crie uma nova branch para sua feature/bugfix:
 
+   ```
+  git checkout -b minha-feature
+  ```
