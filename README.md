@@ -83,3 +83,11 @@ Além disso, é recomendável o uso de um ambiente virtual Python para gerenciar
   ```
   GET /api/games/{steam_id}/
   ```
+
+Retorna uma lista de jogos vinculados ao Steam ID fornecido.
+
+- __Baixar lista de jogos (GET)__
+  
+  ```
+  GET /api/games/{steam_id}/download/
+  ```
