@@ -41,7 +41,8 @@ Além disso, é recomendável o uso de um ambiente virtual Python para gerenciar
 ## Instalação
 1. Clone o repositório para sua máquina local:
    
-```linguagem
-Seu código aqui
+```
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositorio
 ```
 
