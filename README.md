@@ -97,6 +97,7 @@ Baixa a lista de jogos em formato JSON.
 __Endpoint:__ /api/games/{steam_id}/
 
     ```
+    
       [
         {
           "name": "Counter-Strike: Global Offensive",
@@ -109,6 +110,7 @@ __Endpoint:__ /api/games/{steam_id}/
           "last_played": "2024-11-25"
         }
     ]
+    
     ```
 
 ## Contribuição
