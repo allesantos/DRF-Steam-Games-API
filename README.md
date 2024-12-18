@@ -129,3 +129,7 @@ git checkout -b minha-feature
 git push origin minha-feature
 ```
 4. Abra um Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
