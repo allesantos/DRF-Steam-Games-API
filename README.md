@@ -41,40 +41,40 @@ Além disso, é recomendável o uso de um ambiente virtual Python para gerenciar
 ## Instalação
 1. Clone o repositório para sua máquina local:
    
-```
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
-```
+  ```
+  git clone https://github.com/seu-usuario/nome-do-repositorio.git
+  cd nome-do-repositorio
+  ```
 
 2. Crie um ambiente virtual e ative-o:
    
-```
-python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
-```
+  ```
+  python -m venv venv
+  source venv/bin/activate  # No Windows: venv\Scripts\activate
+  ```
 
 3. Instale as dependências do projeto:
    
-```
-pip install -r requirements.txt
-```
+  ```
+  pip install -r requirements.txt
+  ```
 
 4. Configure as variáveis de ambiente para a chave da API da Steam no arquivo .env:
    
-```
-STEAM_API_KEY=YOUR_STEAM_API_KEY
-```
+  ```
+  STEAM_API_KEY=YOUR_STEAM_API_KEY
+  ```
 
 5. Execute as migrações do banco de dados:   
-```
-python manage.py migrate
-```
+  ```
+  python manage.py migrate
+  ```
 
 6. Inicie o servidor de desenvolvimento:
    
-```
-python manage.py runserver
-```
+  ```
+  python manage.py runserver
+  ```
 
 ## Uso
 ### 1. Endpoints principais
