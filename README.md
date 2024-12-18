@@ -70,8 +70,11 @@ STEAM_API_KEY=YOUR_STEAM_API_KEY
 python manage.py migrate
 ```
 
-6. Execute as migrações do banco de dados:
+6. Inicie o servidor de desenvolvimento:
    
 ```
 python manage.py runserver
 ```
+
+## Uso
+### 1. Endpoints principais
