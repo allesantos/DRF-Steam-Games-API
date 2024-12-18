@@ -119,6 +119,6 @@ Sinta-se à vontade para contribuir com o projeto! Basta seguir estas etapas:
    
 2. Crie uma nova branch para sua feature/bugfix:
 
-   ```
-  pip install -r requirements.txt
-  ```
+  ```linguagem
+Seu código aqui
+```
