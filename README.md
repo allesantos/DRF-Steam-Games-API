@@ -125,9 +125,9 @@ git checkout -b minha-feature
 
 3. Envie suas alterações:
 
-  ```
-git push origin minha-feature
-```
+      ```
+      git push origin minha-feature
+      ```
 4. Abra um Pull Request.
 
 ## Licença
