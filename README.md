@@ -46,9 +46,3 @@ Além disso, é recomendável o uso de um ambiente virtual Python para gerenciar
    cd nome-do-repositorio
  ```
 
-1. Clone o repositório para sua máquina local:
-   
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio
- ```
