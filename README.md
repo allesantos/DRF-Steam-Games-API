@@ -46,3 +46,9 @@ git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
 ```
 
+2. Crie um ambiente virtual e ative-o::
+   
+```
+python -m venv venv
+source venv/bin/activate  # No Windows: venv\Scripts\activate
+```
