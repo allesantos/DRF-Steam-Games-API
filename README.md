@@ -109,7 +109,7 @@ __Endpoint:__ /api/games/{steam_id}/
           "last_played": "2024-11-25"
         }
     ]
-  ```
+    ```
 
 ## Contribuição
 
