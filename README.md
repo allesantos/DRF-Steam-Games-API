@@ -121,7 +121,11 @@ Sinta-se à vontade para contribuir com o projeto! Basta seguir estas etapas:
 
   ```
 git checkout -b minha-feature
-
 ```
 
 3. Envie suas alterações:
+
+  ```
+git push origin minha-feature
+```
+4. Abra um Pull Request.
