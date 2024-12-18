@@ -64,3 +64,14 @@ pip install -r requirements.txt
 ```
 STEAM_API_KEY=YOUR_STEAM_API_KEY
 ```
+
+5. Execute as migrações do banco de dados:   
+```
+python manage.py migrate
+```
+
+6. Execute as migrações do banco de dados:
+   
+```
+python manage.py runserver
+```
