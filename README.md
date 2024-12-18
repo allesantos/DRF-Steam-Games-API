@@ -80,6 +80,6 @@ python manage.py runserver
 ### 1. Endpoints principais
 - __Listar jogos de um usuário (GET)__
   
-```
-GET /api/games/{steam_id}/
-```
+  ```
+  GET /api/games/{steam_id}/
+  ```
