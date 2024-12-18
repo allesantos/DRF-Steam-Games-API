@@ -96,9 +96,8 @@ Baixa a lista de jogos em formato JSON.
 ### 2. Exemplo de resposta
 __Endpoint:__ /api/games/{steam_id}/
 
-    ```
     
-      [
+    ```[
         {
           "name": "Counter-Strike: Global Offensive",
           "playtime_forever": 1200,
@@ -110,9 +109,8 @@ __Endpoint:__ /api/games/{steam_id}/
           "last_played": "2024-11-25"
         }
     ]
-    
     ```
-
+  
 ## Contribuição
 
 Sinta-se à vontade para contribuir com o projeto! Basta seguir estas etapas:
