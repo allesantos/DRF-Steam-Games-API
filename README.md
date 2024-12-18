@@ -46,9 +46,21 @@ git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
 ```
 
-2. Crie um ambiente virtual e ative-o::
+2. Crie um ambiente virtual e ative-o:
    
 ```
 python -m venv venv
 source venv/bin/activate  # No Windows: venv\Scripts\activate
+```
+
+3. Instale as dependências do projeto:
+   
+```
+pip install -r requirements.txt
+```
+
+4. Configure as variáveis de ambiente para a chave da API da Steam no arquivo .env:
+   
+```
+STEAM_API_KEY=YOUR_STEAM_API_KEY
 ```
