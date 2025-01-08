@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from rest_framework.response import Response
-from rest_framework import status
 import requests
 from .models import Game
 from django.conf import settings
@@ -16,6 +14,7 @@ def steam_library_view(request):
     """
     error = None
     games = None
+    search_query = request.GET.get('search', '')  # Termo de busca
 
     # Verificar se o Steam ID foi fornecido via GET
     steam_id = request.GET.get('steam_id')
@@ -47,13 +46,21 @@ def steam_library_view(request):
                         appid=game['appid'],
                         defaults={
                             'name': game.get('name', ''),
-                            'tempo_jogado': game.get('tempo_jogado', 0),
+                            'tempo_jogado': game.get('playtime_forever', 0),
                             'img_icon_url': game.get('img_icon_url', '')
                         }
                     )
 
                 # Recuperar jogos do banco de dados
                 games = Game.objects.filter(steam_id=steam_id)
+                if search_query:
+                    games = games.filter(name__icontains=search_query)
+
+                # Adicionar tempo jogado em horas a cada jogo
+                for game in games:
+                    horas = game.tempo_jogado // 60  # Parte inteira das horas
+                    minutos = game.tempo_jogado % 60  # Minutos restantes
+                    game.tempo_jogado_formatado = f"{horas} horas e {minutos} min" if horas > 0 else f"{minutos} min"
 
         except Exception as e:
             error = f"Ocorreu um erro: {str(e)}"

@@ -1,58 +1,74 @@
-{% load static %}
+{% load static %} <!-- Carrega as tags estáticas do Django -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogos na Steam</title>
-    <link rel="stylesheet" href="{% static 'css/steam_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/steam_styles.css' %}"> <!-- Importa o CSS estático -->
 </head>
 <body>
     <div class="container">
         <h1>Jogos na Steam</h1>
-        <form method="GET" action="">
-            <label for="steam_id">Digite seu Steam ID:</label>
-            <input type="text" id="steam_id" name="steam_id" required>
-            <button type="submit">Consultar</button>
-        </form>
+
+        {% if not games %}
+            <!-- Formulário para digitar o Steam ID, exibido quando nenhum jogo está carregado -->
+            <form method="GET" action="">
+                <label for="steam_id">Digite seu Steam ID:</label>
+                <input type="text" id="steam_id" name="steam_id" required>
+                <button type="submit">Consultar</button>
+            </form>
+        {% endif %} <!-- Fim do bloco: Exibe formulário para Steam ID -->
 
         {% if games %}
-            
+            <!-- Formulário para filtrar jogos por nome -->
+            <form method="GET" action="" style="margin-top: 60px;margin-bottom:0px;">
+                <input type="hidden" name="steam_id" value="{{ request.GET.steam_id }}">
+         
+                <input type="text" id="search" name="search" value="{{ request.GET.search }}" placeholder="Digite aqui o nome do jogo...">
+                <button type="submit">Filtrar</button>
+            </form>
+            <br>
+
+            <!-- Tabela de exibição dos jogos carregados -->
             <table>
                 <thead>
                     <tr>
                         <th>Nome do Jogo</th>
-                        <th>Tempo Jogado (minutos)</th>
+                        <th>Tempo Jogado</th>
                         <th>Ícone</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for game in games %}
                         <tr>
-                            <td>{{ game.name }}</td>
-                            <td>{{ game.tempo_jogado }}</td>
+                            <td>{{ game.name }}</td> <!-- Nome do jogo -->
+                            <td>{{ game.tempo_jogado_formatado }}</td> <!-- Tempo jogado no formato apropriado -->
                             <td>
                                 {% if game.img_icon_url %}
+                                    <!-- Exibe o ícone do jogo, se disponível -->
                                     <img src="http://media.steampowered.com/steamcommunity/public/images/apps/{{ game.appid }}/{{ game.img_icon_url }}.jpg" alt="Ícone">
                                 {% else %}
+                                    <!-- Mensagem se o jogo não tiver ícone -->
                                     Sem ícone
-                                {% endif %}
+                                {% endif %} <!-- Fim do bloco: Verifica se o ícone do jogo existe -->
                             </td>
                         </tr>
-                    {% endfor %}
+                    {% endfor %} <!-- Fim do bloco: Itera sobre os jogos -->
                 </tbody>
             </table>
 
-            <!-- Botão para Exportar Jogos -->
+            <!-- Botão para exportar jogos para Excel -->
             <form method="GET" action="{% url 'export_games' %}">
                 <input type="hidden" name="steam_id" value="{{ request.GET.steam_id }}">
                 <button type="submit" style="margin-top: 20px; background-color: green;">Exportar para Excel</button>
             </form>
-        {% endif %}
+        {% endif %} <!-- Fim do bloco: Exibe jogos carregados -->
 
         {% if error %}
+            <!-- Mensagem de erro, se houver -->
             <p class="error">{{ error }}</p>
-        {% endif %}
+        {% endif %} <!-- Fim do bloco: Exibe mensagem de erro -->   
     </div>
 </body>
 </html>
